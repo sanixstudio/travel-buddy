@@ -60,7 +60,11 @@ export default function NavbarWithDropdown() {
                   <a className="justify-between">Profile</a>
                 </li>
                 <li>
-                  <button onClick={() => logout()}>Logout</button>
+                  <button
+                    onClick={() => logout({ returnTo: window.location.origin })}
+                  >
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>
