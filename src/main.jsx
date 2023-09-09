@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppContextProvider from "./context/AppContext.jsx";
 import App from "./App.jsx";
 
 import "./index.css";
@@ -9,6 +8,7 @@ import { ThemeProvider } from "@emotion/react";
 import theme from "./context/ThemeProvider.jsx";
 import { Auth0Provider } from "@auth0/auth0-react";
 import { auth0ClientId, auth0Domain } from "./utils/constants.js";
+import AppContextProvider from "./context/appContext.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App />, errorElement: <h1>Error:</h1> },
