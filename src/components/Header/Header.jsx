@@ -16,21 +16,21 @@ export default function NavbarWithDropdown() {
             className="px-4 flex items-center gap-2 rounded-md text-md sm:text-xl md:text-2xl tracking-widest	"
           >
             <img src="/images/site_logo.png" alt="" className="max-w-[46px]" />
-            <span className="text-accent font-semibold uppercase">
+            <span className="hidden sm:block text-accent font-semibold uppercase">
               Travel Tracker
             </span>
           </a>
         </div>
         <div className="flex-1 justify-end sm:justify-start">
           <button
-            className="btn btn-accent"
+            className="btn btn-accent mr-2"
             onClick={() => {
               if (!user) loginWithRedirect();
               else toggleTracker();
             }}
           >
             {showTrackers ? <FiEyeOff size={22} /> : <FiEye size={22} />}
-            <span className="ml-3">
+            <span className="ml-2 text-[12px] md:text-lg">
               {showTrackers ? "Hide Trackers" : "Show Trackers"}
             </span>
           </button>

@@ -86,7 +86,9 @@ const MapBox = () => {
     }
 
     setShowPopup(false);
-    navigate(0);
+    setTimeout(() => {
+      navigate(0);
+    }, 1000);
   };
 
   return (
