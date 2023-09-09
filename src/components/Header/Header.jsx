@@ -61,7 +61,13 @@ export default function NavbarWithDropdown() {
                 </li>
                 <li>
                   <button
-                    onClick={() => logout({ returnTo: window.location.origin })}
+                    onClick={() =>
+                      logout({
+                        openUrl(url) {
+                          window.location.replace(url);
+                        },
+                      })
+                    }
                   >
                     Logout
                   </button>
